@@ -29,7 +29,7 @@ class Affiliates_PRS_Product {
 	 */
 	public static function init() {
 		if ( is_admin() ) {
-			add_action( 'add_meta_boxes', array( __CLASS__, 'add_meta_boxes' ) );
+			add_action( 'add_meta_boxes', array( __CLASS__, 'add_meta_boxes' ), 10, 2 );
 			add_action( 'save_post', array( __CLASS__, 'save_post' ), 10, 2 );
 		}
 	}
